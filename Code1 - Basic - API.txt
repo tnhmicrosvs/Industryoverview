@@ -1,0 +1,31 @@
+package com.app1;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class heelosp {
+	 @RequestMapping("/") 
+	    public String hello() {
+	        return ("hello Welcome");
+	    }
+	 
+	 @RequestMapping("/abc") 
+	    public String helloabc() {
+	        return ("hello from abc");
+	    }
+}
+
+
+
+-----------------
+
+to enable auto complete 
+
+window - preferences - Java - Editor - ContentAssist
+
+
+In the Auto Activation section fill in Auto activation triggers for Java:
+
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._
+
