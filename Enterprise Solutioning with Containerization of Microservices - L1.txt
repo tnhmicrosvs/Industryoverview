@@ -1,0 +1,58 @@
+
+  DEVOPS CI/CD with Microservices - Enterprise Grade 
+  ==================================================
+
+step 1
+------
+
+  select Microservices as the Software Architecture
+
+  Select Microservices as the Architectural pattern
+
+  Start developing the RESTful services with selected Microservices  Design patterns like  Circuit breaker, Discovery Server, API gateway etc.
+
+Step 2
+------
+
+  Develop the CI / CD infrastructure for pipeline flow
+
+       Components of the Infrastructure
+       --------------------------------
+
+     Code Repo with Version control
+     Code inspection tools 
+     Static or dynamic Analysis for Security best practices
+     Code Quality testing with quality gates
+     Build server (CI - Server)
+     Cloud provider (AWS / GCP / Oracle Azure)
+     Image Repository to store Container images per microservice basis
+     Persistent Storage
+     Container Orchestration Platform (K8, DCOS, Nomad, Docker Swarm)
+     Artifactory Store
+     Deployment server
+     Monitoring 
+     Tracking with logs
+     Dashboard Reporting (operational / analytical)
+       
+
+
+Step 3
+------
+
+  once the CI / CD infra is ready it is time to start developing the builds
+
+ as the dev team checks in the code to the Code Repo the code should go through all
+the steps utilizing the components mentioned in the above infra
+
+ A sample work through given below 
+
+  code commits to code repo --> Build server detects it as a poll with in the 
+schedule time --- > code inspection takes place -- > Code analysis for Security
+ takes place -- > quality testing takes -- > upon passing all quality gates -->
+ a build comes out (Jar / WAR) -- > wrap the build and generate the image -->
+ push the image-to-Image Repo ---> Deployment (running the image and bring the container up)
+ will be taken care by the orchestration platform --> microservices app will be 
+ accessible to the end user or client 
+
+
+
